@@ -23,11 +23,13 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/toastr/build/toastr.min.css",
               "node_modules/ngf-bootstrap/dist/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/toastr/build/toastr.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.js"
             ]
           },
@@ -47,14 +49,7 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                }
-              ]
+              "buildOptimizer": true
             }
           }
         },
@@ -109,7 +104,6 @@
     "ng-fundamentals-e2e": {
       "root": "e2e/",
       "projectType": "application",
-      "prefix": "",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
